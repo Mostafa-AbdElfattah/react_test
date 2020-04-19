@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { PersonDetails } from "./Components/PersonDetails/PersonDetails.component";
+import { ContactInfo } from "./Components/ContactInfo/ContactInfo.component";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends React.Component {
+  render() {
+    return (
+      <div className="container">
+        <div className="first-div">
+          <PersonDetails
+            name="Mostafa Abd El-fattah"
+            age="27"
+            about="i like programing and making wep apps and mobile apps ,also
+            i love learning new technologies related to this field ."
+          />
+        </div>
+        <div className="second-div">
+          <ContactInfo
+            email="Mail@gmail.com"
+            phone="01000000000"
+            faceBook="fb.com/account"
+          />
+        </div>
+      </div>
+    );
+  }
 }
-
-export default App;
